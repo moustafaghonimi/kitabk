@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import '../../../../../core/utils/assatsApp.dart';
 
-import '../../../../core/utiles/assatsApp.dart';
-import '../../../../core/utiles/colorApp.dart';
 
-class CustomListViewItem extends StatelessWidget {
-  const CustomListViewItem({Key? key}) : super(key: key);
+class CustomBooksImage extends StatelessWidget {
+  const CustomBooksImage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2.7 / 4,
+      aspectRatio: 2.6 / 4,
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            image: const DecorationImage(
+            borderRadius: BorderRadius.circular(12),
+            image:  const DecorationImage(
                 image: AssetImage(AssetsApp.testListItem), fit: BoxFit.fill)),
       ),
     );

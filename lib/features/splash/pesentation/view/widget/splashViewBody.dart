@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
-import 'package:kitabk/core/utiles/assatsApp.dart';
-import 'package:kitabk/featurs/home/presentation/view/homeView.dart';
-import 'package:kitabk/featurs/splash/pesentation/view/widget/slideTextWidget.dart';
-
-import '../../../../../core/utiles/constants.dart';
+import 'package:go_router/go_router.dart';
+import 'package:kitabk/core/utils/app_routs.dart';
+import 'package:kitabk/features/splash/pesentation/view/widget/slideTextWidget.dart';
+import '../../../../../core/utils/assatsApp.dart';
+import '../../../../../core/utils/constants.dart';
+import '../../../../home/presentation/homeView.dart';
 
 
 class SplashViewBody extends StatefulWidget {
@@ -59,7 +58,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigateToHomePage(){
     Future.delayed(kNavigatorDuration,() {
-      Get.to(const HomeView(),transition: Transition.zoom);
+      GoRouter.of(context).pushReplacement(AppRouts.kHomeViewRout);
+      // Get.off(const HomeView(),transition: Transition.zoom);
     },);
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../core/utiles/stringConstant.dart';
+import '../../../../../core/utils/stringConstant.dart';
 
 
 class SlideTextWidget extends StatelessWidget {
@@ -15,7 +14,7 @@ class SlideTextWidget extends StatelessWidget {
       builder: (context, child) {
         return SlideTransition(
             position: slideAnimation,
-            child:  const Text(
+            child:   const Text(
               splashText,
               textAlign: TextAlign.center,
             ));
